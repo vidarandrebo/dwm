@@ -95,9 +95,11 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
-	{ 0, XF86XK_MonBrightnessUp,	spawn,		SHCMD("sudo backlight + 15") },
-	{ 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("sudo backlight - 15") },
-	{ 0, XF
+	{ 0, XF86XK_MonBrightnessUp,	spawn,		SHCMD("sudo backlight + 6000") },
+	{ 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("sudo backlight - 6000") },
+	{ 0, XF86XK_AudioRaiseVolume,   spawn,      SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +1% && $refresh_i3status")},
+	{ 0, XF86XK_AudioLowerVolume,   spawn,      SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -1% && $refresh_i3status")},
+	{ 0, XF86XK_AudioMute,   spawn,      SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status")},
 };
 
 /* button definitions */
