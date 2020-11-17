@@ -97,6 +97,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
 	{ 0, XF86XK_MonBrightnessUp,	spawn,		SHCMD("sudo backlight + 15") },
 	{ 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("sudo backlight - 15") },
+	{ 0, XF
 };
 
 /* button definitions */
